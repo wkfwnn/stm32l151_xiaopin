@@ -1,0 +1,21 @@
+#ifndef __CONSOLE_H_
+#define __CONSOLE_H_
+
+#include "user_Define.h"
+
+#define MAX_COMMOND_LEN   6
+#define MAX_FUNCTION_INSTRUCTIONS_LEN (30)
+
+typedef void (*call_back_function_p)(void);
+
+typedef struct {
+	const char commond[MAX_COMMOND_LEN];
+	call_back_function_p   func;
+	const char function_instructions[MAX_FUNCTION_INSTRUCTIONS_LEN];
+}console_commond_map_t;
+
+user_error_t  console_commond_register(const char *commond,call_back_function_p func,const char *instructions);
+void console_task_create(void);
+
+
+#endif 
