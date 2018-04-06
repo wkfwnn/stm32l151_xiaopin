@@ -47,11 +47,13 @@ typedef struct {
 #define UART_CORE_BIT_ALL (UART1_CORE_BIT_0 | UART2_CORE_BIT_4| UART3_CORE_BIT_6)
 
 #define MAX_UART_QUEUE_SIZE   100
-uint8_t uart_queue[3][MAX_UART_QUEUE_SIZE] = {0x0,};
+uint8_t uart_queue1[MAX_UART_QUEUE_SIZE] = {0x0,};
+uint8_t uart_queue2[MAX_UART_QUEUE_SIZE] = {0x0,};
+uint8_t uart_queue3[MAX_UART_QUEUE_SIZE] = {0x0,};
 uart_map_t   uart_map_array[] = {
-	{"uart1",1,&huart1,HAL_UNLOCKED,uart_queue[0],{NULL,NULL,NULL},0,UART_RX_CLOSE,UART1_CORE_BIT_0},
-	{"uart2",2,&huart2,HAL_UNLOCKED,uart_queue[1],{NULL,NULL,NULL},0,UART_RX_CLOSE,UART2_CORE_BIT_4},      //notice:uart only support read data
-	{"uart3",3,&huart3,HAL_UNLOCKED,uart_queue[2],{NULL,NULL,NULL},0,UART_RX_CLOSE,UART3_CORE_BIT_6}
+	{"uart1",1,&huart1,HAL_UNLOCKED,uart_queue1,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART1_CORE_BIT_0},
+	{"uart2",2,&huart2,HAL_UNLOCKED,uart_queue2,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART2_CORE_BIT_4},      //notice:uart only support read data
+	{"uart3",3,&huart3,HAL_UNLOCKED,uart_queue3,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART3_CORE_BIT_6}
 	//add other uart here
 };
 
@@ -168,8 +170,7 @@ void HAL_UART_Rx_FrameCpltCallback(UART_HandleTypeDef *huart)
 			for(j = 0;j < uart_map_array[i].uart_call_back_count;j++){
 				if(uart_map_array[i].uart_read_call_back_array[j] != NULL){
 					uart_map_array[i].uart_read_call_back_array[j](uart_map_array[i].huart_queue_p,huart->RxXferCount);
-				}
-				
+				}	
 			}
 			xResult = xEventGroupSetBitsFromISR(uart_core_event_group,uart_map_array[i].event_bits,
 												&xHigherPriorityTaskWoken);
@@ -361,17 +362,17 @@ void uart_core_read_task_function(void const * argument)
 		}else if( ( uxBits & UART2_CORE_BIT_4 ) != 0 ){
 			uart_read_one_frame_data(&huart2,uart_map_array[1].huart_queue_p,MAX_UART_QUEUE_SIZE);
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-			printf("uart2 start readhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
+			//printf("uart2 start readhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		/* xEventGroupWaitBits() returned because just BIT_4 was set. */
 		}else if( ( uxBits & UART3_CORE_BIT_6 ) != 0 ){
 			uart_read_one_frame_data(&huart3,uart_map_array[2].huart_queue_p,MAX_UART_QUEUE_SIZE);
-			printf("uart3 start read\n");
+			//printf("uart3 start read\n");
 			/* xEventGroupWaitBits() returned because just BIT_6 was set. */
 		}else{
 		/* xEventGroupWaitBits() returned because xTicksToWait ticks passed
 		without either BIT_0 or BIT_4 becoming set. */
 		}
-		printf("nidaye\n");
+		//printf("nidaye\n");
 
 	}
 	

@@ -18,3 +18,5 @@ stm32c8t6\task_state.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue
 stm32c8t6\task_state.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stm32c8t6\task_state.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 stm32c8t6\task_state.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32c8t6\task_state.o: ..\application\console.h
+stm32c8t6\task_state.o: ..\application\user_Define.h
