@@ -2,6 +2,7 @@
 #include "cmsis_os.h"
 #include "stdio.h"
 #include "console.h"
+#include "string.h"
 
 
 static osThreadId task_state_handle;
@@ -9,7 +10,7 @@ static osThreadId task_state_handle;
 
 void task_state_function(void const * argument)
 {
-	char buff[152] = {0x00,};
+	char buff[200] = {0x00,};
 	uint8_t counter = 0;
 	while(1){
 		if(counter == 0){

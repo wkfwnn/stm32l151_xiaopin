@@ -26,4 +26,16 @@ typedef enum {
 	FLAG_WITH_TIMEOUT
 }user_flag_t;
 
+/*if you change DEBUG port, change this macro and find PUTCHAR_PROTOTYPE
+	defined in console.c,change to other uart*/
+#define UART_DEBUG_PORT    "uart2"
+
+/*This is for test func*/
+#define TEST_FUNC            1
+#define TEST_UART1_FUNC      1
+#define TEST_UART2_FUNC      1
+#define TEST_UART3_FUNC      1
+
+
+
 #endif

@@ -30,36 +30,44 @@ typedef struct {
 	char uart_name[UART_NAME_MAX_LEN];
 	uart_handle_t uart_handle;
 	UART_HandleTypeDef *uart;
-	HAL_LockTypeDef lock;  
 	uint8_t *huart_queue_p;
 	/*call back function is in isr routing,pls as short as possible,fist copy data,and relese sem or other signal*/
 	uart_read_call_back  uart_read_call_back_array[MAX_READ_CALL_BACK];
 	uint8_t uart_call_back_count;
 	uint8_t uart_rx_status;
-	uint16_t event_bits;
+	uint16_t read_event_bits;
+	SemaphoreHandle_t xSemaphore;
+	uint16_t write_event_bits;
 }uart_map_t;
 
 
-#define UART1_CORE_BIT_0 ( 1 << 0 )
-#define UART2_CORE_BIT_4 ( 1 << 1 )
-#define UART3_CORE_BIT_6 ( 1 << 2 )
+#define UART1_READ_CORE_BIT_0 ( 1 << 0 )
+#define UART2_READ_CORE_BIT_1 ( 1 << 1 )
+#define UART3_READ_CORE_BIT_2 ( 1 << 2 )
+#define UART_CORE_READ_BIT_ALL (UART1_READ_CORE_BIT_0 | UART2_READ_CORE_BIT_1| UART3_READ_CORE_BIT_2)
 
-#define UART_CORE_BIT_ALL (UART1_CORE_BIT_0 | UART2_CORE_BIT_4| UART3_CORE_BIT_6)
+#define UART1_WRITE_CORE_BIT_3 (1 << 3)
+#define UART2_WRITE_CORE_BIT_4 (1 << 4)
+#define UART3_WRITE_CORE_BIT_5 (1 << 5)
+#define UART_CORE_WRITE_BIT_ALL (UART1_WRITE_CORE_BIT_3 | UART2_WRITE_CORE_BIT_4| UART3_WRITE_CORE_BIT_5)
+
+
 
 #define MAX_UART_QUEUE_SIZE   100
 uint8_t uart_queue1[MAX_UART_QUEUE_SIZE] = {0x0,};
 uint8_t uart_queue2[MAX_UART_QUEUE_SIZE] = {0x0,};
 uint8_t uart_queue3[MAX_UART_QUEUE_SIZE] = {0x0,};
 uart_map_t   uart_map_array[] = {
-	{"uart1",1,&huart1,HAL_UNLOCKED,uart_queue1,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART1_CORE_BIT_0},
-	{"uart2",2,&huart2,HAL_UNLOCKED,uart_queue2,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART2_CORE_BIT_4},      //notice:uart only support read data
-	{"uart3",3,&huart3,HAL_UNLOCKED,uart_queue3,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART3_CORE_BIT_6}
+	{"uart1",1,&huart1,uart_queue1,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART1_READ_CORE_BIT_0,NULL,UART1_WRITE_CORE_BIT_3},
+	{"uart2",2,&huart2,uart_queue2,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART2_READ_CORE_BIT_1,NULL,UART2_WRITE_CORE_BIT_4},
+	{"uart3",3,&huart3,uart_queue3,{NULL,NULL,NULL},0,UART_RX_CLOSE,UART3_READ_CORE_BIT_2,NULL,UART3_WRITE_CORE_BIT_5}
 	//add other uart here
 };
 
 
 
-static EventGroupHandle_t uart_core_event_group;
+static EventGroupHandle_t uart_core_read_event_group;
+static EventGroupHandle_t uart_core_write_event_group;
 
 /*
 @name:can be uart1,uart2,uart3,uart4...
@@ -82,52 +90,35 @@ user_error_t uart_get_handle(const char *uart_name, uint8_t uart_name_len,uart_h
 	
 }
 
-
-
-void HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart)
-{
-  /* Prevent unused argument(s) compilation warning */
-  UNUSED(huart);
-#if 0
-	uint8_t i;
-	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
-		if(uart_map_array[i].uart == huart){
-			if(uart_map_array[i].task_id != NULL){
-				vTaskResume(uart_map_array[i].task_id);
-			}
-		}
-	}
-#endif
-	
-}
-
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
-{
-	#if 0
-	uint8_t i;
-	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
-		if(uart_map_array[i].uart == huart){
-			if(uart_map_array[i].task_id != NULL){
-				vTaskResume(uart_map_array[i].task_id);
-			}
-		}
-	}
-	#endif
-}
-
-
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
-  /* Prevent unused argument(s) compilation warning */
-    UNUSED(huart);
-	#if 0
+	#if 1
 	uint8_t i;
-	
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE,xResult;
 	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
 		if(uart_map_array[i].uart == huart){
-			if(uart_map_array[i].tx_task_id != NULL){
-				vTaskResume(uart_map_array[i].tx_task_id);
-			}
+			printf("%s receive or send fail\n",uart_map_array[i].uart_name);
+			xResult = xEventGroupSetBitsFromISR(uart_core_read_event_group,uart_map_array[i].read_event_bits,
+												&xHigherPriorityTaskWoken);
+			/* Was the message posted successfully */
+			if( xResult != pdFAIL ){
+				/* If xHigherPriorityTaskWoken is now set to pdTRUE then a context
+				switch should be requested. The macro used is port specific and will
+				be either portYIELD_FROM_ISR() or portEND_SWITCHING_ISR() - refer to
+				the documentation page for the port being used. */
+				portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+			}	
+			xResult = xEventGroupSetBitsFromISR(uart_core_write_event_group,uart_map_array[i].write_event_bits,
+												&xHigherPriorityTaskWoken);
+			/* Was the message posted successfully */
+			if( xResult != pdFAIL ){
+				/* If xHigherPriorityTaskWoken is now set to pdTRUE then a context
+				switch should be requested. The macro used is port specific and will
+				be either portYIELD_FROM_ISR() or portEND_SWITCHING_ISR() - refer to
+				the documentation page for the port being used. */
+				portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+			}	
+			
 		}
 	}
 	#endif
@@ -172,7 +163,7 @@ void HAL_UART_Rx_FrameCpltCallback(UART_HandleTypeDef *huart)
 					uart_map_array[i].uart_read_call_back_array[j](uart_map_array[i].huart_queue_p,huart->RxXferCount);
 				}	
 			}
-			xResult = xEventGroupSetBitsFromISR(uart_core_event_group,uart_map_array[i].event_bits,
+			xResult = xEventGroupSetBitsFromISR(uart_core_read_event_group,uart_map_array[i].read_event_bits,
 												&xHigherPriorityTaskWoken);
 			/* Was the message posted successfully */
 			if( xResult != pdFAIL ){
@@ -186,76 +177,6 @@ void HAL_UART_Rx_FrameCpltCallback(UART_HandleTypeDef *huart)
 
 	}
 
-}
-
-/*
-@pdata:data buff pointer
-@data_size:need to write data size
-@actual_size:return actual_size transmit
-@flag:in this funciton only support FLAG_WITH_TIMEOUT
-*/
-user_error_t uart_write_data(uart_handle_t handle,uint8_t *pdata,uint16_t data_size,uint16_t *acual_transmit_size,uart_mode_t mode)
-{
-	user_error_t ret = RET_OK;
-	
-	HAL_StatusTypeDef status;
-	UART_HandleTypeDef *huart = NULL;
-	uint8_t i = 0;
-	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
-		if(uart_map_array[i].uart_handle == handle){
-			if(uart_map_array[i].lock == HAL_UNLOCKED){
-				huart = uart_map_array[i].uart;
-			}else{
-				ret = RET_BUSY;
-				goto return_status;
-			}	
-			break;
-		}
-	}
-	if(huart == NULL){
-		ret = RET_PARA_ERR;
-		goto return_status;
-	}
-	
-	if(mode.flag == FLAG_WITH_TIMEOUT){
-		goto time_out_transmit;
-	}else if(mode.flag == FLAG_BLOCK){
-		ret = RET_PARA_NOT_COMPATIBLE;
-		goto return_status;
-	}else if(mode.flag == FLAG_NO_BLOCK){
-		ret = RET_PARA_NOT_COMPATIBLE;
-		goto return_status;
-	}else{
-		ret =  RET_PARA_ERR;
-		goto return_status;
-	}
-	
-time_out_transmit:
-	uart_map_array[i].lock = HAL_LOCKED;
-	status  = HAL_UART_Transmit(huart, pdata, data_size, mode.time_out);
-	switch(status){
-		case HAL_OK:
-			*acual_transmit_size = data_size;
-			ret =  RET_OK;
-			break;
-		case HAL_ERROR:
-			ret =  RET_ERROR;
-			break;
-		case HAL_BUSY:
-			ret =  RET_BUSY;
-			break;
-		case HAL_TIMEOUT:
-			*acual_transmit_size = huart->RxXferCount;
-			ret =  RET_TIME_OUT;
-			break;
-		default:
-			ret = RET_UNKNOWN_PARAMETER;
-			break;
-	}
-	uart_map_array[i].lock = HAL_UNLOCKED;
-	
-return_status:
-	return ret;
 }
 
 /*
@@ -281,8 +202,6 @@ reveive_dma:
 	return status;
 }
 
-
-
 user_error_t  uart_core_read_register(uart_handle_t handle,uart_read_call_back call_back_func)
 {
 	uint8_t i;
@@ -297,21 +216,20 @@ user_error_t  uart_core_read_register(uart_handle_t handle,uart_read_call_back c
 				if(uart_map_array[i].uart_rx_status != UART_RX_OEPN){
 					//printf("uart core start open uart read\n");
 					uart_map_array[i].uart_rx_status = UART_RX_OEPN;
-					uxBits = xEventGroupSetBits(uart_core_event_group,uart_map_array[i].event_bits);
-					//uxBits = xEventGroupSetBits(uart_core_event_group,UART2_CORE_BIT_4);
-					if( ( uxBits & ( UART_CORE_BIT_ALL ) ) == ( UART_CORE_BIT_ALL ) )
+					uxBits = xEventGroupSetBits(uart_core_read_event_group,uart_map_array[i].read_event_bits);
+					if( ( uxBits & ( UART_CORE_READ_BIT_ALL ) ) == ( UART_CORE_READ_BIT_ALL ) )
 					{
 					/*  bit 0 and bit 4 均被置位. */
 					}
-					else if( ( uxBits & UART1_CORE_BIT_0 ) != 0 )
+					else if( ( uxBits & UART1_READ_CORE_BIT_0 ) != 0 )
 					{
 					/* 只有Bit 0 被置位 */
 					}
-					else if( ( uxBits & UART2_CORE_BIT_4 ) != 0 )
+					else if( ( uxBits & UART2_READ_CORE_BIT_1 ) != 0 )
 					{
 					/* 只有Bit 4 被置位 . */
 					}
-					else if( ( uxBits & UART3_CORE_BIT_6 ) != 0 )
+					else if( ( uxBits & UART3_READ_CORE_BIT_2 ) != 0 )
 					{
 					/* 只有Bit 6 被置位 . */
 					}
@@ -346,25 +264,21 @@ void uart_core_read_task_function(void const * argument)
 	while(1){
 		EventBits_t uxBits;
 		const TickType_t xTicksToWait = pdMS_TO_TICKS( portMAX_DELAY);
-		uxBits = xEventGroupWaitBits( uart_core_event_group,UART_CORE_BIT_ALL,
+		uxBits = xEventGroupWaitBits( uart_core_read_event_group,UART_CORE_READ_BIT_ALL,
 							          pdTRUE,pdFALSE,xTicksToWait);
 		//	
 		//uart_read_one_frame_data(&huart2,uart_map_array[1].huart_queue_p,MAX_UART_QUEUE_SIZE);
 		//uart_read_one_frame_data(&huart3,uart_map_array[2].huart_queue_p,MAX_UART_QUEUE_SIZE);
-		if( ( uxBits & ( UART1_CORE_BIT_0 | UART2_CORE_BIT_4 | UART3_CORE_BIT_6 ) ) == 
-			( UART1_CORE_BIT_0 | UART2_CORE_BIT_4 | UART3_CORE_BIT_6) ){
-			printf("uart start read\n");
-			/* xEventGroupWaitBits() returned because both bits were set. */
+		if( ( uxBits & ( UART_CORE_READ_BIT_ALL ) == ( UART_CORE_READ_BIT_ALL ))){
 		
-		}else if( ( uxBits & UART1_CORE_BIT_0 ) != 0 ){
+		}else if( ( uxBits & UART1_READ_CORE_BIT_0 ) != 0 ){
 			uart_read_one_frame_data(&huart1,uart_map_array[0].huart_queue_p,MAX_UART_QUEUE_SIZE);
 			/* xEventGroupWaitBits() returned because just BIT_0 was set. */
-		}else if( ( uxBits & UART2_CORE_BIT_4 ) != 0 ){
+		}else if( ( uxBits & UART2_READ_CORE_BIT_1 ) != 0 ){
 			uart_read_one_frame_data(&huart2,uart_map_array[1].huart_queue_p,MAX_UART_QUEUE_SIZE);
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
 			//printf("uart2 start readhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		/* xEventGroupWaitBits() returned because just BIT_4 was set. */
-		}else if( ( uxBits & UART3_CORE_BIT_6 ) != 0 ){
+		}else if( ( uxBits & UART3_READ_CORE_BIT_2 ) != 0 ){
 			uart_read_one_frame_data(&huart3,uart_map_array[2].huart_queue_p,MAX_UART_QUEUE_SIZE);
 			//printf("uart3 start read\n");
 			/* xEventGroupWaitBits() returned because just BIT_6 was set. */
@@ -375,33 +289,162 @@ void uart_core_read_task_function(void const * argument)
 		//printf("nidaye\n");
 
 	}
-	
-
-
 }
 
 
-
-void uart_core_read_task_create()
+/********************************************************************************
+	This is uart-core write funciton,including tx call back,tx funcition
+********************************************************************************/
+void HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart)
 {
-	osThreadId uart_core_task_handle;
-	osThreadDef(uart_core, uart_core_read_task_function, osPriorityNormal, 0, 128);
-	uart_core_task_handle = osThreadCreate(osThread(uart_core), NULL);
+  /* Prevent unused argument(s) compilation warning */
+  UNUSED(huart);
+#if 0
+	uint8_t i;
+	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
+		if(uart_map_array[i].uart == huart){
+			if(uart_map_array[i].task_id != NULL){
+				vTaskResume(uart_map_array[i].task_id);
+			}
+		}
+	}
+#endif
 	
-	if(uart_core_task_handle == NULL){
+}
+
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE,xResult;
+	
+	uint8_t i;
+	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
+		if(uart_map_array[i].uart == huart){
+			xResult = xEventGroupSetBitsFromISR(uart_core_write_event_group,uart_map_array[i].write_event_bits,
+												&xHigherPriorityTaskWoken);
+			/* Was the message posted successfully */
+			if( xResult != pdFAIL ){
+				/* If xHigherPriorityTaskWoken is now set to pdTRUE then a context
+				switch should be requested. The macro used is port specific and will
+				be either portYIELD_FROM_ISR() or portEND_SWITCHING_ISR() - refer to
+				the documentation page for the port being used. */
+				portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+			}	
+		}
+	}
+}
+
+/*
+@pdata:data buff pointer
+@data_size:need to write data size
+@actual_size:return actual_size transmit
+@notice:in this funciton is block transfer
+*/
+user_error_t uart_write_data(uart_handle_t handle,uint8_t *pdata,uint16_t data_size,uint16_t *acual_transmit_size)
+{
+	user_error_t ret = RET_OK;
+	
+	HAL_StatusTypeDef hal_status;
+	UART_HandleTypeDef *huart = NULL;
+	uint8_t count = 0;
+	EventBits_t uxBits;
+	uint8_t i = 0;
+	//jutice para of data size and data pointer
+	if(data_size == 0 || pdata == NULL){
+		ret = RET_PARA_ERR;
+		goto return_status;
+	}
+	printf("nihao\n");
+	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
+		if(uart_map_array[i].uart_handle == handle){
+			if(uart_map_array[i].xSemaphore != NULL){
+				huart = uart_map_array[i].uart;
+				xSemaphoreTake( uart_map_array[i].xSemaphore,portMAX_DELAY);
+				goto dma_transmit;
+				 
+			}			
+		}
+	}
+	if(huart == NULL){
+		ret = RET_PARA_ERR;
+		goto return_status;
+	}
+	
+dma_transmit:
+	hal_status  = HAL_UART_Transmit_DMA(huart,pdata,data_size);
+	if(hal_status == HAL_OK){
+		uxBits = xEventGroupWaitBits( uart_core_write_event_group,uart_map_array[i].write_event_bits,
+							          pdTRUE,pdFALSE,portMAX_DELAY);
+		if((uxBits & uart_map_array[i].write_event_bits) != 0){
+			if((uart_map_array[i].uart->ErrorCode & HAL_UART_ERROR_DMA) != 0){
+				uart_map_array[i].uart->ErrorCode&= (~HAL_UART_ERROR_DMA);
+				ret = RET_ERROR;
+			}else{
+				ret = RET_OK;	
+			}
+			*acual_transmit_size = uart_map_array[i].uart->TxXferCount; 
+			xSemaphoreGive(uart_map_array[i].xSemaphore);
+			goto return_status;
+			
+		}
+	}else if(hal_status == HAL_BUSY){
+		vTaskDelay(1);
+		if(count++ > 100){
+			printf("uart core %s write data fail\n",uart_map_array[i].uart_name);
+			xSemaphoreGive(uart_map_array[i].xSemaphore);
+			ret = RET_TIME_OUT;
+			goto return_status;
+		}
+		goto dma_transmit;	
+	}
+	
+return_status:
+	return ret;
+}
+
+
+void uart_core_task_create()
+{
+	/*uart read task */
+	osThreadId uart_core_task_read_handle;
+	osThreadDef(uart_read_core, uart_core_read_task_function, osPriorityNormal, 0, 64);
+	uart_core_task_read_handle = osThreadCreate(osThread(uart_read_core), NULL);
+	
+	if(uart_core_task_read_handle == NULL){
 		printf("uart_core_read_task_function create fail\n");
 	}else{
 		printf("uart_core_read_task_function create success\n");
 	}
-	
 	/* Attempt to create the event group. */
-	uart_core_event_group = xEventGroupCreate();
+	uart_core_read_event_group = xEventGroupCreate();
 	/* Was the event group created successfully */
-	if( uart_core_event_group == NULL ){
-		printf("uart core group create fail\n");	
+	if( uart_core_read_event_group == NULL ){
+		printf("uart core read group create fail\n");	
 	}
 	else{		
-		printf("uart core group create success\n");
-		xEventGroupClearBits(uart_core_event_group,UART1_CORE_BIT_0 | UART2_CORE_BIT_4| UART3_CORE_BIT_6);
+		printf("uart core read group create success\n");
+		xEventGroupClearBits(uart_core_read_event_group,(UART_CORE_READ_BIT_ALL));
 	}
+	
+	uint8_t i;
+	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
+		if(strncmp(uart_map_array[i].uart_name,UART_DEBUG_PORT,strlen(uart_map_array[i].uart_name))!= 0){
+			vSemaphoreCreateBinary(uart_map_array[i].xSemaphore);
+			if(uart_map_array[i].xSemaphore == NULL){
+				printf("%s seam create fail\n",uart_map_array[i].uart_name);
+			}
+		}
+	}
+
+	/* Attempt to create the event group. */
+	uart_core_write_event_group = xEventGroupCreate();
+	/* Was the event group created successfully */
+	if( uart_core_write_event_group == NULL ){
+		printf("uart core write group create fail\n");	
+	}
+	else{		
+		printf("uart core write group create success\n");
+		xEventGroupClearBits(uart_core_write_event_group,(UART_CORE_WRITE_BIT_ALL));
+	}
+	
 }

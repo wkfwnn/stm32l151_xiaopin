@@ -4,9 +4,12 @@
 #include "user_define.h"
 #include "uart-core.h"
 #include "string.h"
+#include "stm32l1xx_hal.h"
+
 
 #define CONSOLE_COMMOND_MAX_LEN      10
 #define CONSOLE_BUFF_COUNT          2
+#define CONSOLE_EVENT_BITS         (1 <<0)
 
 typedef struct {
 	osThreadId task_handle;
@@ -14,14 +17,14 @@ typedef struct {
 	uint8_t commond_map_counter;
 	uint8_t console_buff[MAX_UART_QUEUE_SIZE];
 	uint8_t console_buff_size;
-	SemaphoreHandle_t xSemaphore;
+	EventGroupHandle_t console_event_handle;
 }console_struct_t;
 
 
 static console_struct_t console = {
 	.commond_map_counter = 0x00,
 	.console_buff_size =0x0,
-	.xSemaphore = NULL
+	.console_event_handle = NULL
 };
 
 void help_function(void)
@@ -52,25 +55,27 @@ static void register_help_commond()
 
 void console_read_call_back(uint8_t *data,uint16_t size)
 {
-	memcpy(console.console_buff,data,(console.console_buff_size = (size >= MAX_UART_QUEUE_SIZE? MAX_UART_QUEUE_SIZE:size)));
-	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	BaseType_t status;
-	
-	/* The event has occurred, use the semaphore to unblock the task so the task
-	can process the event. */
-	status = xSemaphoreGiveFromISR( console.xSemaphore, &xHigherPriorityTaskWoken);
-	if(status != pdTRUE){
-		printf("console send fail\n");
-	}
-	/* Now the task has been unblocked a context switch should be performed if
-	xHigherPriorityTaskWoken is equal to pdTRUE. NOTE: The syntax required to perform
-	a context switch from an ISR varies from port to port, and from compiler to
-	compiler. Check the web documentation and examples for the port being used to
-	find the syntax required for your application. */
-	if(xHigherPriorityTaskWoken == pdTRUE){
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE,xResult;
+	memcpy(console.console_buff,data,
+		  (console.console_buff_size = (size >= MAX_UART_QUEUE_SIZE? MAX_UART_QUEUE_SIZE:size)));
+	#if 0
+	xResult = xEventGroupSetBitsFromISR(console.console_event_handle,CONSOLE_EVENT_BITS,
+												&xHigherPriorityTaskWoken);
+	/* Was the message posted successfully */
+	if( xResult != pdFAIL ){
+		/* If xHigherPriorityTaskWoken is now set to pdTRUE then a context
+		switch should be requested. The macro used is port specific and will
+		be either portYIELD_FROM_ISR() or portEND_SWITCHING_ISR() - refer to
+		the documentation page for the port being used. */
 		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
-	
 	}
+	#endif
+	xResult = xTaskResumeFromISR(console.task_handle);
+	if(xResult != pdTRUE ){
+		printf("console task resume err\n");		
+
+	}
+	
 	//printf("console receive buff size is %d\n",size);	
 }
 
@@ -86,7 +91,7 @@ void parsing_console_string(uint8_t *pdata,uint16_t size)
 //	printf("map count = %d\n",console.commond_map_counter);
 	for(i = 0; i < console.commond_map_counter;i++){
 		//printf("name is %s.len is %d\n",console.console_commond_map[i].commond_name,console.console_commond_map[i].commond_name_len);
-		if(strncmp(console.console_commond_map[i].commond_name,pdata,console.console_commond_map[i].commond_name_len) == 0){
+		if(strncmp(console.console_commond_map[i].commond_name,(const char *)pdata,console.console_commond_map[i].commond_name_len) == 0){
 			commond_found_flag = 1;
 			console.console_commond_map[i].func();	
 		}
@@ -100,12 +105,11 @@ void console_task_function(void const * argument)
 {
 	uart_handle_t console_handle = 0;
 	user_error_t sc;
-	BaseType_t ret;
-	sc = uart_get_handle("uart2",sizeof("uart1"),&console_handle);
+	sc = uart_get_handle(UART_DEBUG_PORT,sizeof(UART_DEBUG_PORT),&console_handle);
 	if(sc == RET_OK){
-		printf("console get uart2 handle is %d\n",console_handle);
+		printf("console get %s handle is %d\n",UART_DEBUG_PORT,console_handle);
 	}else{
-		printf("console get uart2 handle fail %d,exit console_task \n",sc);
+		printf("console get %s handle fail %d,exit console_task \n",UART_DEBUG_PORT,sc);
 		vTaskDelete(console.task_handle);
 		vTaskDelete(NULL);
 	}
@@ -115,20 +119,26 @@ void console_task_function(void const * argument)
 	}else{
 		printf("console core register success \n");
 	}
-	 vSemaphoreCreateBinary(console.xSemaphore);
-	if( console.xSemaphore == NULL ){
-		printf("console sem create fail\n");
-	}
 	while(1){
-		 if(console.xSemaphore){
-			ret = xSemaphoreTake(console.xSemaphore,portMAX_DELAY);
+		#if 0
+		EventBits_t uxBits;
+		const TickType_t xTicksToWait = pdMS_TO_TICKS( portMAX_DELAY);
+		 if(console.console_event_handle){
+			uxBits = xEventGroupWaitBits( console.console_event_handle,CONSOLE_EVENT_BITS,
+						          pdTRUE,pdFALSE,xTicksToWait);
+			if((uxBits & CONSOLE_EVENT_BITS) != 0){
+				parsing_console_string(console.console_buff,console.console_buff_size);
+				memset(console.console_buff,0x00,console.console_buff_size);	
+			}else{
+				printf("console receive unaccepted event\n");
+			}
 		 }else{
 			vTaskSuspend(console.task_handle);
 		 }
-		 if(ret == pdPASS){
-			parsing_console_string(console.console_buff,console.console_buff_size);
-			memset(console.console_buff,0x00,console.console_buff_size);
-		 }
+		 #endif
+		 vTaskSuspend(console.task_handle);
+		 parsing_console_string(console.console_buff,console.console_buff_size);
+		 memset(console.console_buff,0x00,console.console_buff_size);	
 	}
 	
 }
@@ -141,6 +151,15 @@ void console_task_create(void)
 		printf("console_task_function create fail\n");
 	}else{
 		printf("console_task_function create success\n");
+	}
+	console.console_event_handle = xEventGroupCreate();
+	/* Was the event group created successfully */
+	if( console.console_event_handle == NULL ){
+		printf("console.console_event_handle group create fail\n");	
+	}
+	else{		
+		printf("console.console_event_handle create success\n");
+		xEventGroupClearBits(console.console_event_handle,(CONSOLE_EVENT_BITS));
 	}
 	register_help_commond();
 
@@ -191,6 +210,26 @@ user_error_t  console_commond_register(const char *commond_name,uint8_t commond_
 return_status:
 	return ret;
 }
+
+extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart3;
+#ifdef __GNUC__
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif
+/** 
+* @brief  Retargets the C library printf function to the USART. 
+* @param  None 
+* @retval None 
+*/  
+PUTCHAR_PROTOTYPE  
+{  
+	HAL_UART_Transmit(&huart2, (uint8_t *)&ch,1,0xFF);
+	return ch;
+} 
+
 
 
 
