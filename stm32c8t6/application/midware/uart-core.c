@@ -340,7 +340,7 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 @actual_size:return actual_size transmit
 @notice:in this funciton is block transfer
 */
-user_error_t uart_write_data(uart_handle_t handle,uint8_t *pdata,uint16_t data_size,uint16_t *acual_transmit_size)
+user_error_t uart_write_data(uart_handle_t handle,uint8_t *pdata,uint16_t data_size)
 {
 	user_error_t ret = RET_OK;
 	
@@ -354,7 +354,6 @@ user_error_t uart_write_data(uart_handle_t handle,uint8_t *pdata,uint16_t data_s
 		ret = RET_PARA_ERR;
 		goto return_status;
 	}
-	printf("nihao\n");
 	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
 		if(uart_map_array[i].uart_handle == handle){
 			if(uart_map_array[i].xSemaphore != NULL){
@@ -366,7 +365,7 @@ user_error_t uart_write_data(uart_handle_t handle,uint8_t *pdata,uint16_t data_s
 		}
 	}
 	if(huart == NULL){
-		ret = RET_PARA_ERR;
+		ret = RET_DO_NOT_SUPPORT_CURRENT;
 		goto return_status;
 	}
 	
@@ -382,7 +381,6 @@ dma_transmit:
 			}else{
 				ret = RET_OK;	
 			}
-			*acual_transmit_size = uart_map_array[i].uart->TxXferCount; 
 			xSemaphoreGive(uart_map_array[i].xSemaphore);
 			goto return_status;
 			

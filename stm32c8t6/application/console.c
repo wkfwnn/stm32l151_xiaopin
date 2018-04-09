@@ -58,7 +58,7 @@ void console_read_call_back(uint8_t *data,uint16_t size)
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE,xResult;
 	memcpy(console.console_buff,data,
 		  (console.console_buff_size = (size >= MAX_UART_QUEUE_SIZE? MAX_UART_QUEUE_SIZE:size)));
-	#if 0
+	#if 1
 	xResult = xEventGroupSetBitsFromISR(console.console_event_handle,CONSOLE_EVENT_BITS,
 												&xHigherPriorityTaskWoken);
 	/* Was the message posted successfully */
@@ -69,12 +69,13 @@ void console_read_call_back(uint8_t *data,uint16_t size)
 		the documentation page for the port being used. */
 		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
 	}
-	#endif
+	#else
 	xResult = xTaskResumeFromISR(console.task_handle);
 	if(xResult != pdTRUE ){
 		printf("console task resume err\n");		
 
 	}
+	#endif
 	
 	//printf("console receive buff size is %d\n",size);	
 }
@@ -120,7 +121,7 @@ void console_task_function(void const * argument)
 		printf("console core register success \n");
 	}
 	while(1){
-		#if 0
+		#if 1
 		EventBits_t uxBits;
 		const TickType_t xTicksToWait = pdMS_TO_TICKS( portMAX_DELAY);
 		 if(console.console_event_handle){
@@ -135,10 +136,11 @@ void console_task_function(void const * argument)
 		 }else{
 			vTaskSuspend(console.task_handle);
 		 }
+		 #else
+			 vTaskSuspend(console.task_handle);
+			 parsing_console_string(console.console_buff,console.console_buff_size);
+			 memset(console.console_buff,0x00,console.console_buff_size);	
 		 #endif
-		 vTaskSuspend(console.task_handle);
-		 parsing_console_string(console.console_buff,console.console_buff_size);
-		 memset(console.console_buff,0x00,console.console_buff_size);	
 	}
 	
 }
