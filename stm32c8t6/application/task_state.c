@@ -10,7 +10,7 @@ static osThreadId task_state_handle;
 
 void task_state_function(void const * argument)
 {
-	char buff[200] = {0x00,};
+	char buff[240] = {0x00,};
 	uint8_t counter = 0;
 	while(1){
 		if(counter == 0){
@@ -39,7 +39,7 @@ void task_uart_commond_excute_func()
 void create_state_task(void)
 {
 	user_error_t ret;
-	osThreadDef(task_state, task_state_function, osPriorityLow, 0, 128);
+	osThreadDef(task_state, task_state_function, osPriorityLow, 0, 140);
 	task_state_handle = osThreadCreate(osThread(task_state), NULL);
 	if(task_state_handle == NULL){
 		printf("task_state_function create fail\n");
