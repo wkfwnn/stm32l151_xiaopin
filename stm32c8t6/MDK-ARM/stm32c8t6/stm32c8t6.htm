@@ -3,9 +3,9 @@
 <title>Static Call Graph - [stm32c8t6\stm32c8t6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image stm32c8t6\stm32c8t6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Mon Apr 09 22:56:13 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Tue Apr 10 23:00:52 2018
 <BR><P>
-<H3>Maximum Stack Usage =        384 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        424 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 task_state_function &rArr; vTaskList &rArr; uxTaskGetSystemState &rArr; prvListTasksWithinSingleList &rArr; vTaskGetInfo &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 <P>
@@ -1048,8 +1048,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
 
-<P><STRONG><a name="[48]"></a>task_state_function</STRONG> (Thumb, 82 bytes, Stack size 200 bytes, task_state.o(i.task_state_function))
-<BR><BR>[Stack]<UL><LI>Max Depth = 384<LI>Call Chain = task_state_function &rArr; vTaskList &rArr; uxTaskGetSystemState &rArr; prvListTasksWithinSingleList &rArr; vTaskGetInfo &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+<P><STRONG><a name="[48]"></a>task_state_function</STRONG> (Thumb, 82 bytes, Stack size 240 bytes, task_state.o(i.task_state_function))
+<BR><BR>[Stack]<UL><LI>Max Depth = 424<LI>Call Chain = task_state_function &rArr; vTaskList &rArr; uxTaskGetSystemState &rArr; prvListTasksWithinSingleList &rArr; vTaskGetInfo &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskList
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskGetRunTimeStats

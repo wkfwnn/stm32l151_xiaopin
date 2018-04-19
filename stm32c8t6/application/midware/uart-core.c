@@ -443,6 +443,6 @@ void uart_core_task_create()
 	else{		
 		printf("uart core write group create success\n");
 		xEventGroupClearBits(uart_core_write_event_group,(UART_CORE_WRITE_BIT_ALL));
-	}
-	
+	}	
 }
+
