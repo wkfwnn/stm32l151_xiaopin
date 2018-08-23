@@ -25,3 +25,4 @@ stm32c8t6\application.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/c
 stm32c8t6\application.o: ..\application\midware\test-core.h
 stm32c8t6\application.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\application.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32c8t6\application.o: ..\application\module\A9500_iot_module.h

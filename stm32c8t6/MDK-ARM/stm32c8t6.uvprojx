@@ -51,7 +51,7 @@
           <OutputName>stm32c8t6</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>0</BrowseInformation>
           <ListingPath></ListingPath>
@@ -133,11 +133,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4107</DriverSelection>
+            <DriverSelection>4100</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L151xBA</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32L1xx_HAL_Driver/Inc;../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32L1xx/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Drivers/CMSIS/Include;..\application;..\application\midware;..\application\test</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32L1xx_HAL_Driver/Inc;../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Drivers/CMSIS/Device/ST/STM32L1xx/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Drivers/CMSIS/Include;..\application;..\application\midware;..\application\test;..\application\module</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -438,6 +438,26 @@
               <FileName>test-core.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\midware\test-core.c</FilePath>
+            </File>
+            <File>
+              <FileName>A9500_iot_module.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\A9500_iot_module.c</FilePath>
+            </File>
+            <File>
+              <FileName>at_commond_praser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\at_commond_praser.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_bluetooth_module.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\ble_bluetooth_module.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\ble_bluetooth.c</FilePath>
             </File>
           </Files>
         </Group>

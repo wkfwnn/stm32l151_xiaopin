@@ -1,6 +1,6 @@
 Dependencies for Project 'stm32c8t6', Target 'stm32c8t6': (DO NOT MODIFY !)
 F (startup_stm32l151xba.s)(0x5AC89DA3)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include--pd "__UVISION_VERSION SETA 521" --pd "_RTE_ SETA 1" --pd "STM32L151xBA SETA 1"--list startup_stm32l151xba.lst --xref -o stm32c8t6\startup_stm32l151xba.o --depend stm32c8t6\startup_stm32l151xba.d)
-F (../Src/system_stm32l1xx.c)(0x5ABA6B21)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\system_stm32l1xx.o --depend stm32c8t6\system_stm32l1xx.d)
+F (../Src/system_stm32l1xx.c)(0x5ABA6B21)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\system_stm32l1xx.o --depend stm32c8t6\system_stm32l1xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l151xba.h)(0x5ABA6B21)
 I (../Drivers/CMSIS/Include/core_cm3.h)(0x5ABA6B18)
@@ -10,8 +10,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5ABA6B18)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5ABA6B18)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/system_stm32l1xx.h)(0x5ABA6B21)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5ABA6B18)
@@ -29,13 +29,13 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (..\application\application.c)(0x5AC8906D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\application.o --depend stm32c8t6\application.d)
+F (..\application\application.c)(0x5B7EBFD0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\application.o --depend stm32c8t6\application.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -54,15 +54,16 @@ I (..\application\user_Define.h)(0x5ACA3439)
 I (..\application\midware\uart-core.h)(0x5ACA4692)
 I (..\application\midware\test-core.h)(0x5AC8A021)
 I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (..\application\console.c)(0x5AC8DC88)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\console.o --depend stm32c8t6\console.d)
+I (..\application\module\A9500_iot_module.h)(0x5ADAA426)
+F (..\application\console.c)(0x5B7EBF62)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\console.o --depend stm32c8t6\console.d)
 I (..\application\console.h)(0x5AC75B90)
 I (..\application\user_Define.h)(0x5ACA3439)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -78,7 +79,7 @@ I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
 I (..\application\midware\uart-core.h)(0x5ACA4692)
 I (D:\keil_v5\ARM\ARMCC\include\string.h)(0x574E3E26)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -102,14 +103,14 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (..\application\task_state.c)(0x5ACCD1A2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\task_state.o --depend stm32c8t6\task_state.d)
+F (..\application\task_state.c)(0x5B7D8338)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\task_state.o --depend stm32c8t6\task_state.d)
 I (..\application\task_state.h)(0x5AC5F8B1)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -125,15 +126,15 @@ I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
 I (..\application\console.h)(0x5AC75B90)
 I (..\application\user_Define.h)(0x5ACA3439)
 I (D:\keil_v5\ARM\ARMCC\include\string.h)(0x574E3E26)
-F (..\application\midware\uart-core.c)(0x5ACCCBB0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\uart-core.o --depend stm32c8t6\uart-core.d)
+F (..\application\midware\uart-core.c)(0x5ACCCBB0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\uart-core.o --depend stm32c8t6\uart-core.d)
 I (..\application\midware\uart-core.h)(0x5ACA4692)
 I (..\application\user_define.h)(0x5ACA3439)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -147,7 +148,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -172,15 +173,15 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
 I (D:\keil_v5\ARM\ARMCC\include\string.h)(0x574E3E26)
-F (..\application\test\test_uart1.c)(0x5ACA4A18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test_uart1.o --depend stm32c8t6\test_uart1.d)
+F (..\application\test\test_uart1.c)(0x5ACA4A18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test_uart1.o --depend stm32c8t6\test_uart1.d)
 I (..\application\test\test_uart1.h)(0x5AC890F4)
 I (..\application\midware\test-core.h)(0x5AC8A021)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -195,15 +196,15 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19
 I (..\application\user_define.h)(0x5ACA3439)
 I (..\application\midware\uart-core.h)(0x5ACA4692)
 I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (..\application\test\test_uart2.c)(0x5ACB7ECF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test_uart2.o --depend stm32c8t6\test_uart2.d)
+F (..\application\test\test_uart2.c)(0x5B7EC028)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test_uart2.o --depend stm32c8t6\test_uart2.d)
 I (..\application\test\test_uart2.h)(0x5AC890F4)
 I (..\application\midware\test-core.h)(0x5AC8A021)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -218,15 +219,15 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19
 I (..\application\user_define.h)(0x5ACA3439)
 I (..\application\midware\uart-core.h)(0x5ACA4692)
 I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (..\application\test\test_uart3.c)(0x5ACA46C0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test_uart3.o --depend stm32c8t6\test_uart3.d)
+F (..\application\test\test_uart3.c)(0x5B7D8FBA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test_uart3.o --depend stm32c8t6\test_uart3.d)
 I (..\application\test\test_uart3.h)(0x5AC890F3)
 I (..\application\midware\test-core.h)(0x5AC8A021)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -241,14 +242,14 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19
 I (..\application\user_define.h)(0x5ACA3439)
 I (..\application\midware\uart-core.h)(0x5ACA4692)
 I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (..\application\midware\test-core.c)(0x5AC8A016)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test-core.o --depend stm32c8t6\test-core.d)
+F (..\application\midware\test-core.c)(0x5AC8A016)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\test-core.o --depend stm32c8t6\test-core.d)
 I (..\application\midware\test-core.h)(0x5AC8A021)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -266,10 +267,16 @@ I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
 I (..\application\test\test_uart1.h)(0x5AC890F4)
 I (..\application\test\test_uart2.h)(0x5AC890F4)
 I (..\application\test\test_uart3.h)(0x5AC890F3)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_gpio.o --depend stm32c8t6\stm32l1xx_hal_gpio.d)
+F (..\application\module\A9500_iot_module.c)(0x5ADAA50D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\a9500_iot_module.o --depend stm32c8t6\a9500_iot_module.d)
+I (..\application\module\A9500_iot_module.h)(0x5ADAA426)
+I (..\application\module\A9500_module_at_commond.h)(0x5B7EC8DB)
+F (..\application\module\at_commond_praser.c)(0x5B72DC94)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\at_commond_praser.o --depend stm32c8t6\at_commond_praser.d)
+I (..\application\module\at_commond_praser.h)(0x5ADAA723)
+F (..\application\module\ble_bluetooth_module.c)(0x5B7EC02E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\ble_bluetooth_module.o --depend stm32c8t6\ble_bluetooth_module.d)
+I (..\application\module\ble_bluetooth_module.h)(0x5B7EC227)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -295,10 +302,28 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_flash_ramfunc.o --depend stm32c8t6\stm32l1xx_hal_flash_ramfunc.d)
+I (..\application\midware\uart-core.h)(0x5ACA4692)
+I (..\application\user_define.h)(0x5ACA3439)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
+I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
+F (..\application\ble_bluetooth.c)(0x5B7EC8C6)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\ble_bluetooth.o --depend stm32c8t6\ble_bluetooth.d)
+I (..\application\ble_bluetooth.h)(0x5B7EC29B)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -324,10 +349,28 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_cortex.o --depend stm32c8t6\stm32l1xx_hal_cortex.d)
+I (..\application\module\ble_bluetooth_module.h)(0x5B7EC227)
+I (..\application\midware\uart-core.h)(0x5ACA4692)
+I (..\application\user_define.h)(0x5ACA3439)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
+I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5ABA6B19)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_gpio.o --depend stm32c8t6\stm32l1xx_hal_gpio.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -353,10 +396,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_tim.o --depend stm32c8t6\stm32l1xx_hal_tim.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_flash_ramfunc.o --depend stm32c8t6\stm32l1xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -382,10 +425,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_flash_ex.o --depend stm32c8t6\stm32l1xx_hal_flash_ex.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_cortex.o --depend stm32c8t6\stm32l1xx_hal_cortex.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -411,10 +454,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_dma.o --depend stm32c8t6\stm32l1xx_hal_dma.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_tim.o --depend stm32c8t6\stm32l1xx_hal_tim.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -440,10 +483,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_pwr_ex.o --depend stm32c8t6\stm32l1xx_hal_pwr_ex.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_flash_ex.o --depend stm32c8t6\stm32l1xx_hal_flash_ex.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -469,10 +512,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c)(0x5AC89F1C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_uart.o --depend stm32c8t6\stm32l1xx_hal_uart.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_dma.o --depend stm32c8t6\stm32l1xx_hal_dma.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -498,10 +541,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal.o --depend stm32c8t6\stm32l1xx_hal.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_pwr_ex.o --depend stm32c8t6\stm32l1xx_hal_pwr_ex.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -527,10 +570,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_rcc_ex.o --depend stm32c8t6\stm32l1xx_hal_rcc_ex.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c)(0x5B7D804F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_uart.o --depend stm32c8t6\stm32l1xx_hal_uart.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -556,10 +599,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_flash.o --depend stm32c8t6\stm32l1xx_hal_flash.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal.o --depend stm32c8t6\stm32l1xx_hal.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -585,10 +628,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_rcc.o --depend stm32c8t6\stm32l1xx_hal_rcc.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_rcc_ex.o --depend stm32c8t6\stm32l1xx_hal_rcc_ex.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -614,10 +657,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_pwr.o --depend stm32c8t6\stm32l1xx_hal_pwr.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_flash.o --depend stm32c8t6\stm32l1xx_hal_flash.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -643,10 +686,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_tim_ex.o --depend stm32c8t6\stm32l1xx_hal_tim_ex.d)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_rcc.o --depend stm32c8t6\stm32l1xx_hal_rcc.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -672,10 +715,68 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Src/main.c)(0x5AC8DDCE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\main.o --depend stm32c8t6\main.d)
-I (../Inc/main.h)(0x5AC89DA1)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_pwr.o --depend stm32c8t6\stm32l1xx_hal_pwr.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l151xba.h)(0x5ABA6B21)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5ABA6B18)
+I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5ABA6B18)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5ABA6B18)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5ABA6B18)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/system_stm32l1xx.h)(0x5ABA6B21)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5ABA6B18)
+I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_gpio.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_gpio_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_dma.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_cortex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ramfunc.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
+F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c)(0x5ABA6B18)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_tim_ex.o --depend stm32c8t6\stm32l1xx_hal_tim_ex.d)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l151xba.h)(0x5ABA6B21)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5ABA6B18)
+I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5ABA6B18)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5ABA6B18)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5ABA6B18)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/system_stm32l1xx.h)(0x5ABA6B21)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5ABA6B18)
+I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_gpio.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_gpio_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_dma.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_cortex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ramfunc.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
+F (../Src/main.c)(0x5B7D80AA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\main.o --depend stm32c8t6\main.d)
+I (../Inc/main.h)(0x5B7D801D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -704,7 +805,7 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -717,12 +818,12 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
 I (..\application\application.h)(0x5AC39B32)
-F (../Src/freertos.c)(0x5AC89DA1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\freertos_1.o --depend stm32c8t6\freertos_1.d)
+F (../Src/freertos.c)(0x5B7D801D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\freertos_1.o --depend stm32c8t6\freertos_1.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -730,10 +831,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
-F (../Src/stm32l1xx_hal_timebase_TIM.c)(0x5AC89DA1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_timebase_tim.o --depend stm32c8t6\stm32l1xx_hal_timebase_tim.d)
+F (../Src/stm32l1xx_hal_timebase_TIM.c)(0x5B7D801D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_timebase_tim.o --depend stm32c8t6\stm32l1xx_hal_timebase_tim.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -759,10 +860,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Src/stm32l1xx_hal_msp.c)(0x5AC89DA1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_msp.o --depend stm32c8t6\stm32l1xx_hal_msp.d)
+F (../Src/stm32l1xx_hal_msp.c)(0x5B7D801D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_hal_msp.o --depend stm32c8t6\stm32l1xx_hal_msp.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -788,10 +889,10 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-F (../Src/stm32l1xx_it.c)(0x5AC89DA1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_it.o --depend stm32c8t6\stm32l1xx_it.d)
+F (../Src/stm32l1xx_it.c)(0x5B7D801D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\stm32l1xx_it.o --depend stm32c8t6\stm32l1xx_it.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5ABA6B18)
-I (../Inc/stm32l1xx_hal_conf.h)(0x5AC89DA1)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_hal_conf.h)(0x5B7D801D)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5AC8DD7F)
 I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5ABA6B21)
@@ -817,11 +918,11 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h)(0x5ABA6B18)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5AC89EE8)
-I (../Inc/stm32l1xx_it.h)(0x5AC89DA1)
+I (../Inc/stm32l1xx_it.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -833,13 +934,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/timers.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\timers.o --depend stm32c8t6\timers.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/timers.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\timers.o --depend stm32c8t6\timers.d)
 I (D:\keil_v5\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -849,13 +950,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\event_groups.o --depend stm32c8t6\event_groups.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\event_groups.o --depend stm32c8t6\event_groups.d)
 I (D:\keil_v5\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -865,27 +966,27 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/list.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\list.o --depend stm32c8t6\list.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/list.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\list.o --depend stm32c8t6\list.d)
 I (D:\keil_v5\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/queue.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\queue.o --depend stm32c8t6\queue.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/queue.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\queue.o --depend stm32c8t6\queue.d)
 I (D:\keil_v5\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\string.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -894,13 +995,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\heap_4.o --depend stm32c8t6\heap_4.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\heap_4.o --depend stm32c8t6\heap_4.d)
 I (D:\keil_v5\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -908,14 +1009,14 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/tasks.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\tasks.o --depend stm32c8t6\tasks.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/tasks.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\tasks.o --depend stm32c8t6\tasks.d)
 I (D:\keil_v5\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\string.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -926,14 +1027,14 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\cmsis_os.o --depend stm32c8t6\cmsis_os.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\cmsis_os.o --depend stm32c8t6\cmsis_os.d)
 I (D:\keil_v5\ARM\ARMCC\include\string.h)(0x574E3E26)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -946,12 +1047,12 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5ABA6B19)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5ABA6B18)
-F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\croutine.o --depend stm32c8t6\croutine.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\croutine.o --depend stm32c8t6\croutine.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)
@@ -960,12 +1061,12 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5ABA6B19
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h)(0x5ABA6B19)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\port.o --depend stm32c8t6\port.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c)(0x5ABA6B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Drivers/CMSIS/Include -I ..\application -I ..\application\midware -I ..\application\test -I ..\application\module-IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE-ID:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32c8t6\port.o --depend stm32c8t6\port.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5ABA6B19)
 I (D:\keil_v5\ARM\ARMCC\include\stddef.h)(0x574E3E26)
 I (D:\keil_v5\ARM\ARMCC\include\stdint.h)(0x574E3E26)
-I (../Inc/FreeRTOSConfig.h)(0x5AC8DD8D)
-I (../Inc/main.h)(0x5AC89DA1)
+I (../Inc/FreeRTOSConfig.h)(0x5B7D811A)
+I (../Inc/main.h)(0x5B7D801D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5ABA6B19)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5ABA6B19)

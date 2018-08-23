@@ -18,7 +18,7 @@ void task_state_function(void const * argument)
 			counter++;
 		}else{
 		  if(counter++ < 4){
-			vTaskList(buff);	
+			vTaskList(buff);
 			printf("%s\n",buff);
 			vTaskGetRunTimeStats(buff);
 			printf("%s\n",buff);

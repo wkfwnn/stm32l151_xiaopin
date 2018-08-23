@@ -15,13 +15,16 @@ void test_uart2_function(void const * argument)
 		vTaskDelete(NULL);
 	}
 	while(1){
-		//sc = uart_write_data(test_uart2_handle, "this from uart2 test func hello\n", 
-					//	sizeof("this from uart2 test func hello\n"));
-		//if(sc == RET_OK){
-		//	printf("test_uart2 transmit ok\n");
-		//}else{
-		//	printf("uart2 send fail %d\n",sc);
-		//}
+		#if 0
+		sc = uart_write_data(test_uart2_handle, "this from uart2 test func hello\n", 
+					sizeof("this from uart2 test func hello\n"));
+		if(sc == RET_OK){
+			printf("test_uart2 transmit ok\n");
+		}else{
+			printf("uart2 send fail %d\n",sc);
+		}
+		#endif
+		
 		vTaskDelay(1000);
 	}
 }

@@ -4,14 +4,33 @@
 #include "console.h"
 #include "uart-core.h"
 #include "test-core.h"
+#include "A9500_iot_module.h"
 
 
-void application_start()
+
+
+void soc_start()
 {
+	
 	uart_core_task_create();
 	create_state_task();
 	console_task_create();
+	ble_task_create();
 #if TEST_FUNC
 	test_func_start();
 #endif
+
+}
+
+
+void bsp_module_start()
+{
+	ble_module_start();
+	a9500_module_start();
+}
+
+void application_start()
+{
+	soc_start();
+	bsp_module_start();
 }
