@@ -1,5 +1,6 @@
 #include "ble_bluetooth.h"
 #include "ble_bluetooth_module.h"
+#include "string.h"
 
 #define BLE_TASK_EVENT_BITS         (1 <<0)
 
@@ -35,9 +36,9 @@ void ble_task_data_call_back(uint8_t *data,uint16_t size)
 		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
 	}
 	#else
-	xResult = xTaskResumeFromISR(console.task_handle);
+	xResult = xTaskResumeFromISR(ble_task.task_handle);
 	if(xResult != pdTRUE ){
-		printf("console task resume err\n");		
+		printf("ble task resume err\n");		
 
 	}
 	#endif	

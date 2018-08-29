@@ -106,7 +106,15 @@ int ble_data_read_call_back_register(ble_read_call_back call_back)
 	return RET_OK;
 }
 
- 
+
+int ble_module_send_data(uint8_t *data,uint16_t data_len)
+{
+	int sc = 0x00;
+	
+	sc = uart_write_data(ble_module.handle,data,data_len);
+	
+	return sc;
+}
 
 
 
