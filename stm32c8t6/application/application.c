@@ -5,6 +5,9 @@
 #include "uart-core.h"
 #include "test-core.h"
 #include "A9500_iot_module.h"
+#include "ble_bluetooth_module.h"
+#include "ble_bluetooth.h"
+#include "motor_module.h"
 
 
 
@@ -27,6 +30,7 @@ void bsp_module_start()
 {
 	ble_module_start();
 	a9500_module_start();
+	motor_module_start();
 }
 
 void application_start()

@@ -1829,7 +1829,7 @@ HAL_StatusTypeDef HAL_UART_Receive_Frame_DMA(UART_HandleTypeDef *huart, uint8_t 
 
 
 
-//¡ä??¨²?¨®¨º????D?D??  
+//Â¡Ã¤??Â¨Â²?Â¨Â®Â¨Âº????D?D??  
 static HAL_StatusTypeDef UsartReceive_IDLE_IT(UART_HandleTypeDef *huart)  
 {  
     uint32_t tmp_state; 

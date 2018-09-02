@@ -1,5 +1,8 @@
 #include "A9500_iot_module.h"
 #include "A9500_module_at_commond.h"
+#include "stm32l1xx_hal.h"
+#include "user_define.h"
+#include "cmsis_os.h"
 
 void a9500mggt_reset()
 {
@@ -23,6 +26,7 @@ int a9500mggt_power_on_and_check()
 	}else{
 		sc = RET_ERROR;
 	}
+	return sc;
 }
 
 
@@ -43,7 +47,7 @@ return_value:
 
 void a9500_module_start()
 {
-	a9500_self_test()	
+	a9500_self_test();
 
 
 }

@@ -14,7 +14,7 @@
 
 
 /*software function*/
-void a9500_module_start();
+void a9500_module_start(void);
 
 
 #endif
