@@ -38,5 +38,6 @@ typedef struct {
 /*external infterface */
 void ble_module_start(void);
 int ble_data_read_call_back_register(ble_read_call_back call_back);
+int ble_module_send_data(uint8_t *data,uint16_t data_len);
 
 #endif

@@ -48,3 +48,5 @@ stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/qu
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 stm32c8t6\ble_bluetooth.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h
+stm32c8t6\ble_bluetooth.o: ..\application\module\motor_module.h
+stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

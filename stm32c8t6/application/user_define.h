@@ -33,9 +33,9 @@ typedef enum {
 
 /*This is for test func*/
 #define TEST_FUNC            1
-#define TEST_UART1_FUNC      1
+#define TEST_UART1_FUNC      0
 #define TEST_UART2_FUNC      1
-#define TEST_UART3_FUNC      1
+#define TEST_UART3_FUNC      0
 
 
 

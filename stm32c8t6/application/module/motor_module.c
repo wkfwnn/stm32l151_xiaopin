@@ -1,4 +1,7 @@
 #include "motor_module.h"
+#include "cmsis_os.h"
+#include "stm32l1xx_hal.h"
+#include "stdio.h"
 
 /*speak control*/
 #define SPEAK_GPIO_GROUP             GPIOA
@@ -69,9 +72,9 @@ void get_motor_module_status(uint8_t *status)
 void set_speak_out_put(uint8_t status)
 {
 	switch (status){
-		case SPEAK_STATUS_ALARM:
+		case SPEAK_STATUS_ALARM:speak_alarm();
 			break;	
-		case SPEAK_STATUS_MUTE:
+		case SPEAK_STATUS_MUTE:speak_mute();
 			break;
 		default:printf("set speak out put do not support\n");
 		break;

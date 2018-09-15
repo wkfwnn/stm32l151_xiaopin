@@ -1,6 +1,7 @@
 #include "ble_bluetooth.h"
 #include "ble_bluetooth_module.h"
 #include "string.h"
+#include "motor_module.h"
 
 #define BLE_TASK_EVENT_BITS         (1 <<0)
 
@@ -19,6 +20,13 @@ ble_task_struct_t ble_task = {
 };
 
 
+typedef enum {
+	BLE_OPEN_LOCK = 0x0,
+	BLE_CLOSE_LOCK
+}ble_cmd_t;
+
+
+
 void ble_task_data_call_back(uint8_t *data,uint16_t size)
 {
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE,xResult;
@@ -33,7 +41,7 @@ void ble_task_data_call_back(uint8_t *data,uint16_t size)
 		switch should be requested. The macro used is port specific and will
 		be either portYIELD_FROM_ISR() or portEND_SWITCHING_ISR() - refer to
 		the documentation page for the port being used. */
-		portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+		portYIELD_FROM_ISR( xHigherPriorityTaskWoken);
 	}
 	#else
 	xResult = xTaskResumeFromISR(ble_task.task_handle);
@@ -44,9 +52,46 @@ void ble_task_data_call_back(uint8_t *data,uint16_t size)
 	#endif	
 }
 
+
+void ble_data_deal(uint8_t size,uint8_t *data)
+{
+	uint8_t i = 0;
+	for(i = 0;i < ble_task.ble_task_size;i++)
+		printf("%x",ble_task.ble_task_buff[i]);
+	printf("\n"); 
+	uint8_t data_ret[2] = {0x00,};
+	uint8_t ret = RET_OK;
+	if(size != 1){
+		ret = RET_ERROR;
+	}else{
+		switch (data[0]){
+			case BLE_OPEN_LOCK:
+				set_speak_out_put(SPEAK_STATUS_ALARM);
+				ret = RET_OK;
+				break;
+			case BLE_CLOSE_LOCK:
+				set_speak_out_put(SPEAK_STATUS_ALARM);
+				ret = RET_OK;
+				break;
+			default:
+				ret = RET_ERROR;
+				
+		}
+		
+	}
+	data_ret[0] = data[0];
+	data_ret[1] = ret;
+	ret = ble_module_send_data(data_ret,sizeof(data_ret));
+	//ret = ble_module_send_data("nidaye",10);
+	if(ret != RET_OK){
+		printf("ble send data fail\n");
+	}
+}
+
+
 void ble_task_function(void const * argument)
 {
-	int sc = 0x00,i = 0;
+	int sc = 0x00;
 	sc =  ble_data_read_call_back_register(ble_task_data_call_back);
 	if(sc != RET_OK){
 		printf("ble task register ble data read fail %d\n",sc);
@@ -59,9 +104,7 @@ void ble_task_function(void const * argument)
 			uxBits = xEventGroupWaitBits( ble_task.ble_task_event_handle,BLE_TASK_EVENT_BITS,
 						          pdTRUE,pdFALSE,xTicksToWait);	
 			if((uxBits & BLE_TASK_EVENT_BITS) != 0 ){
-				for(i = 0;i < ble_task.ble_task_size;i++)
-					printf("%c",ble_task.ble_task_buff[i]);
-				printf("\n");
+				ble_data_deal(ble_task.ble_task_size,ble_task.ble_task_buff);
 			}
 
 

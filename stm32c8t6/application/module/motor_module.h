@@ -1,8 +1,7 @@
-
 #ifndef __MOTOR_MODULE_H_
 #define __MOTOR_MODULE_H_
 
-
+#include "cmsis_os.h"
 
 typedef enum {
 	MOTOR_MODULE_STATUS_NONE,
@@ -31,5 +30,6 @@ typedef enum {
 }speak_status_t;
 
 void motor_module_start(void);
+void set_speak_out_put(uint8_t status);
 
 #endif
