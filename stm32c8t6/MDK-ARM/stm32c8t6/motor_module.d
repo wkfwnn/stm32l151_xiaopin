@@ -45,3 +45,6 @@ stm32c8t6\motor_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_
 stm32c8t6\motor_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h
 stm32c8t6\motor_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h
 stm32c8t6\motor_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
+stm32c8t6\motor_module.o: ..\application\module\infrared_detection_module.h
+stm32c8t6\motor_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+stm32c8t6\motor_module.o: ..\application\user_define.h

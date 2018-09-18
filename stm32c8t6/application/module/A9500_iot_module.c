@@ -33,6 +33,7 @@ int a9500mggt_power_on_and_check()
 
 static int a9500_self_test()
 {
+#if 0
 	int sc = RET_OK;
 	sc = a9500mggt_power_on_and_check();
 	if(sc != RET_OK){
@@ -42,6 +43,8 @@ static int a9500_self_test()
 	
 return_value:
 	return sc;
+#endif
+
 }
 
 

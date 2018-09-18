@@ -237,7 +237,7 @@ user_error_t  uart_core_read_register(uart_handle_t handle,uart_read_call_back c
 					{
 					/* 置位失败. */
 					}
-					printf("uxBits = %x\n",uxBits);
+					//printf("uxBits = %x\n",uxBits);
 					ret = RET_OK;
 					goto return_status;
 				}else{

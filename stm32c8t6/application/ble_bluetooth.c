@@ -2,6 +2,8 @@
 #include "ble_bluetooth_module.h"
 #include "string.h"
 #include "motor_module.h"
+#include "speak_module.h"
+
 
 #define BLE_TASK_EVENT_BITS         (1 <<0)
 

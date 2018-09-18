@@ -26,6 +26,7 @@ stm32c8t6\application.o: ..\application\midware\test-core.h
 stm32c8t6\application.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\application.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32c8t6\application.o: ..\application\module\A9500_iot_module.h
+stm32c8t6\application.o: ..\application\lock.h
 stm32c8t6\application.o: ..\application\module\ble_bluetooth_module.h
 stm32c8t6\application.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h
 stm32c8t6\application.o: ../Inc/stm32l1xx_hal_conf.h
@@ -55,4 +56,7 @@ stm32c8t6\application.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_e
 stm32c8t6\application.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
 stm32c8t6\application.o: ..\application\ble_bluetooth.h
 stm32c8t6\application.o: ..\application\module\motor_module.h
+stm32c8t6\application.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+stm32c8t6\application.o: ..\application\motor_lock.h
+stm32c8t6\application.o: ..\application\module\infrared_detection_module.h
 stm32c8t6\application.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
