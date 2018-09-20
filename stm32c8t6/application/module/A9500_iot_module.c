@@ -37,7 +37,7 @@ static int a9500_self_test()
 	int sc = RET_OK;
 	sc = a9500mggt_power_on_and_check();
 	if(sc != RET_OK){
-		printf("a9500 module self test fail\n");
+		DBG_LOG("a9500 module self test fail\n");
 		goto return_value;
 	}
 	

@@ -1,10 +1,11 @@
 stm32c8t6\uart-core.o: ..\application\midware\uart-core.c
 stm32c8t6\uart-core.o: ..\application\midware\uart-core.h
 stm32c8t6\uart-core.o: ..\application\user_define.h
-stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+stm32c8t6\uart-core.o: ..\application\module\log_module.h
+stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 stm32c8t6\uart-core.o: ../Inc/FreeRTOSConfig.h
 stm32c8t6\uart-core.o: ../Inc/main.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -12,13 +13,14 @@ stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portab
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h
+stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32c8t6\uart-core.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h
 stm32c8t6\uart-core.o: ../Inc/stm32l1xx_hal_conf.h
 stm32c8t6\uart-core.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h
@@ -46,4 +48,3 @@ stm32c8t6\uart-core.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h
 stm32c8t6\uart-core.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h
 stm32c8t6\uart-core.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
 stm32c8t6\uart-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-stm32c8t6\uart-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h

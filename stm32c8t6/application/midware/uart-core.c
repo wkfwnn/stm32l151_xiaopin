@@ -97,7 +97,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE,xResult;
 	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
 		if(uart_map_array[i].uart == huart){
-			printf("%s receive or send fail\n",uart_map_array[i].uart_name);
+			DBG_LOG_ISR("%s receive or send fail\n",uart_map_array[i].uart_name);
 			xResult = xEventGroupSetBitsFromISR(uart_core_read_event_group,uart_map_array[i].read_event_bits,
 												&xHigherPriorityTaskWoken);
 			/* Was the message posted successfully */
@@ -191,7 +191,7 @@ HAL_StatusTypeDef  uart_read_one_frame_data(UART_HandleTypeDef *huart,uint8_t *p
 reveive_dma:
 	status = HAL_UART_Receive_Frame_DMA(huart,pdata,data_size);
 	if(status != HAL_OK && status != HAL_BUSY){
-		printf("HAL_UART_Receive_DMA fail  or busy %d\n",status);
+		DBG_LOG("HAL_UART_Receive_DMA fail  or busy %d\n",status);
 	}else if(status == HAL_BUSY){
 		vTaskDelay(1);
 		if(count++ >100){
@@ -210,11 +210,11 @@ user_error_t  uart_core_read_register(uart_handle_t handle,uart_read_call_back c
 	for(i = 0;i <sizeof(uart_map_array)/sizeof(uart_map_t);i++){
 		if(uart_map_array[i].uart_handle == handle){	
 			if(uart_map_array[i].uart_call_back_count++< MAX_READ_CALL_BACK){
-				printf("i = %d,uart_call_back_count = %d\n",i,uart_map_array[i].uart_call_back_count);
+				DBG_LOG("i = %d,uart_call_back_count = %d\n",i,uart_map_array[i].uart_call_back_count);
 				uart_map_array[i].uart_read_call_back_array[uart_map_array[i].uart_call_back_count-1] = call_back_func;
-				//printf("uart -core register %s at %d\n",uart_map_array[i].uart_name,uart_map_array[i].uart_call_back_count);
+				//DBG_LOG("uart -core register %s at %d\n",uart_map_array[i].uart_name,uart_map_array[i].uart_call_back_count);
 				if(uart_map_array[i].uart_rx_status != UART_RX_OEPN){
-					//printf("uart core start open uart read\n");
+					//DBG_LOG("uart core start open uart read\n");
 					uart_map_array[i].uart_rx_status = UART_RX_OEPN;
 					uxBits = xEventGroupSetBits(uart_core_read_event_group,uart_map_array[i].read_event_bits);
 					if( ( uxBits & ( UART_CORE_READ_BIT_ALL ) ) == ( UART_CORE_READ_BIT_ALL ) )
@@ -237,7 +237,7 @@ user_error_t  uart_core_read_register(uart_handle_t handle,uart_read_call_back c
 					{
 					/* 置位失败. */
 					}
-					//printf("uxBits = %x\n",uxBits);
+					//DBG_LOG("uxBits = %x\n",uxBits);
 					ret = RET_OK;
 					goto return_status;
 				}else{
@@ -276,17 +276,17 @@ void uart_core_read_task_function(void const * argument)
 			/* xEventGroupWaitBits() returned because just BIT_0 was set. */
 		}else if( ( uxBits & UART2_READ_CORE_BIT_1 ) != 0 ){
 			uart_read_one_frame_data(&huart2,uart_map_array[1].huart_queue_p,MAX_UART_QUEUE_SIZE);
-			//printf("uart2 start readhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
+			//DBG_LOG("uart2 start readhaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		/* xEventGroupWaitBits() returned because just BIT_4 was set. */
 		}else if( ( uxBits & UART3_READ_CORE_BIT_2 ) != 0 ){
 			uart_read_one_frame_data(&huart3,uart_map_array[2].huart_queue_p,MAX_UART_QUEUE_SIZE);
-			//printf("uart3 start read\n");
+			//DBG_LOG("uart3 start read\n");
 			/* xEventGroupWaitBits() returned because just BIT_6 was set. */
 		}else{
 		/* xEventGroupWaitBits() returned because xTicksToWait ticks passed
 		without either BIT_0 or BIT_4 becoming set. */
 		}
-		//printf("nidaye\n");
+		//DBG_LOG("nidaye\n");
 
 	}
 }
@@ -388,7 +388,7 @@ dma_transmit:
 	}else if(hal_status == HAL_BUSY){
 		vTaskDelay(1);
 		if(count++ > 100){
-			printf("uart core %s write data fail\n",uart_map_array[i].uart_name);
+			DBG_LOG("uart core %s write data fail\n",uart_map_array[i].uart_name);
 			xSemaphoreGive(uart_map_array[i].xSemaphore);
 			ret = RET_TIME_OUT;
 			goto return_status;
@@ -401,7 +401,7 @@ return_status:
 }
 
 
-void uart_core_task_create()
+void uart_core_module_start()
 {
 	/*uart read task */
 	osThreadId uart_core_task_read_handle;
@@ -409,18 +409,18 @@ void uart_core_task_create()
 	uart_core_task_read_handle = osThreadCreate(osThread(uart_read_core), NULL);
 	
 	if(uart_core_task_read_handle == NULL){
-		printf("uart_core_read_task_function create fail\n");
+		DBG_LOG("uart_core_read_task_function create fail\n");
 	}else{
-		printf("uart_core_read_task_function create success\n");
+		DBG_LOG("uart_core_read_task_function create success\n");
 	}
 	/* Attempt to create the event group. */
 	uart_core_read_event_group = xEventGroupCreate();
 	/* Was the event group created successfully */
 	if( uart_core_read_event_group == NULL ){
-		printf("uart core read group create fail\n");	
+		DBG_LOG("uart core read group create fail\n");	
 	}
 	else{		
-		printf("uart core read group create success\n");
+		DBG_LOG("uart core read group create success\n");
 		xEventGroupClearBits(uart_core_read_event_group,(UART_CORE_READ_BIT_ALL));
 	}
 	
@@ -429,7 +429,7 @@ void uart_core_task_create()
 		if(strncmp(uart_map_array[i].uart_name,UART_DEBUG_PORT,strlen(uart_map_array[i].uart_name))!= 0){
 			vSemaphoreCreateBinary(uart_map_array[i].xSemaphore);
 			if(uart_map_array[i].xSemaphore == NULL){
-				printf("%s seam create fail\n",uart_map_array[i].uart_name);
+				DBG_LOG("%s seam create fail\n",uart_map_array[i].uart_name);
 			}
 		}
 	}
@@ -438,10 +438,10 @@ void uart_core_task_create()
 	uart_core_write_event_group = xEventGroupCreate();
 	/* Was the event group created successfully */
 	if( uart_core_write_event_group == NULL ){
-		printf("uart core write group create fail\n");	
+		DBG_LOG("uart core write group create fail\n");	
 	}
 	else{		
-		printf("uart core write group create success\n");
+		DBG_LOG("uart core write group create success\n");
 		xEventGroupClearBits(uart_core_write_event_group,(UART_CORE_WRITE_BIT_ALL));
 	}	
 }

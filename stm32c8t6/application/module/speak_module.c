@@ -1,6 +1,6 @@
 #include "speak_module.h"
 #include "stm32l1xx_hal.h"
-
+#include "user_define.h"
 
 
 /*speak control*/
@@ -19,7 +19,7 @@ void set_speak_out_put(uint8_t status)
 			break;	
 		case SPEAK_STATUS_MUTE:speak_mute();
 			break;
-		default:printf("set speak out put do not support\n");
+		default:DBG_LOG("set speak out put do not support\n");
 		break;
 	}
 

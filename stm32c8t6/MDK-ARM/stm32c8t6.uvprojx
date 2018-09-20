@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L151xBA</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc; ../Drivers/STM32L1xx_HAL_Driver/Inc; ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3; ../Drivers/CMSIS/Device/ST/STM32L1xx/Include; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS; ../Drivers/CMSIS/Include; ..\application; ..\application\midware; ..\application\test; ..\application\module</IncludePath>
+              <IncludePath>../Inc;   ../Drivers/STM32L1xx_HAL_Driver/Inc;   ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy;   ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;   ../Drivers/CMSIS/Device/ST/STM32L1xx/Include;   ../Middlewares/Third_Party/FreeRTOS/Source/include;   ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;   ../Drivers/CMSIS/Include;   ..\application;   ..\application\midware;   ..\application\test;   ..\application\module</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,6 +463,41 @@
               <FileName>motor_module.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\module\motor_module.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor_lock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\motor_lock.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>lock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\lock.c</FilePath>
+            </File>
+            <File>
+              <FileName>speak_module.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\speak_module.c</FilePath>
+            </File>
+            <File>
+              <FileName>infrared_detection_module.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\infrared_detection_module.c</FilePath>
+            </File>
+            <File>
+              <FileName>log_module.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\log_module.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_gpio_module.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\module\user_gpio_module.c</FilePath>
             </File>
           </Files>
         </Group>

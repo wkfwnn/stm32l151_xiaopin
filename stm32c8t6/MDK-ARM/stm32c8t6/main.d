@@ -44,3 +44,6 @@ stm32c8t6\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 stm32c8t6\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stm32c8t6\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 stm32c8t6\main.o: ..\application\application.h
+stm32c8t6\main.o: ..\application\user_define.h
+stm32c8t6\main.o: ..\application\module\log_module.h
+stm32c8t6\main.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h

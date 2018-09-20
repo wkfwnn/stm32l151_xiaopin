@@ -32,7 +32,7 @@ stm32c8t6\ble_bluetooth.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uar
 stm32c8t6\ble_bluetooth.o: ..\application\module\ble_bluetooth_module.h
 stm32c8t6\ble_bluetooth.o: ..\application\midware\uart-core.h
 stm32c8t6\ble_bluetooth.o: ..\application\user_define.h
-stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+stm32c8t6\ble_bluetooth.o: ..\application\module\log_module.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 stm32c8t6\ble_bluetooth.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 stm32c8t6\ble_bluetooth.o: ../Inc/FreeRTOSConfig.h
@@ -41,13 +41,14 @@ stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/po
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+stm32c8t6\ble_bluetooth.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h
+stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-stm32c8t6\ble_bluetooth.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h
 stm32c8t6\ble_bluetooth.o: ..\application\module\motor_module.h
 stm32c8t6\ble_bluetooth.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\ble_bluetooth.o: ..\application\module\speak_module.h

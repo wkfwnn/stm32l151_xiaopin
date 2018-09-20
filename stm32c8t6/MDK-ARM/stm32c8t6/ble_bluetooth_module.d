@@ -31,7 +31,7 @@ stm32c8t6\ble_bluetooth_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_
 stm32c8t6\ble_bluetooth_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
 stm32c8t6\ble_bluetooth_module.o: ..\application\midware\uart-core.h
 stm32c8t6\ble_bluetooth_module.o: ..\application\user_define.h
-stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+stm32c8t6\ble_bluetooth_module.o: ..\application\module\log_module.h
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 stm32c8t6\ble_bluetooth_module.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 stm32c8t6\ble_bluetooth_module.o: ../Inc/FreeRTOSConfig.h
@@ -40,6 +40,8 @@ stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/inc
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+stm32c8t6\ble_bluetooth_module.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h
+stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 stm32c8t6\ble_bluetooth_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h

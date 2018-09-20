@@ -80,15 +80,15 @@ void ble_module_start()
 	
 	sc = uart_get_handle(BLE_UART,sizeof(BLE_UART),&ble_module.handle);
 	if(sc == RET_OK){
-		printf("ble get %s handle is %d\n",BLE_UART,ble_module.handle);
+		DBG_LOG("ble get %s handle is %d\n",BLE_UART,ble_module.handle);
 	}else{
-		printf("ble  get %s handle fail %d,exit console_task \n",BLE_UART,sc);
+		DBG_LOG("ble  get %s handle fail %d,exit console_task \n",BLE_UART,sc);
 	}
 	sc = uart_core_read_register(ble_module.handle,ble_uart_read_call_back);
 	if(sc != RET_OK){
-		printf("ble uart register fail %d\n",sc);
+		DBG_LOG("ble uart register fail %d\n",sc);
 	}else{
-		printf("ble uart register success \n");
+		DBG_LOG("ble uart register success \n");
 	}	
 }
 

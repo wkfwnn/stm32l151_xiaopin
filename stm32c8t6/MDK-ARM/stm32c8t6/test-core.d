@@ -18,9 +18,11 @@ stm32c8t6\test-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.
 stm32c8t6\test-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stm32c8t6\test-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 stm32c8t6\test-core.o: ..\application\user_define.h
+stm32c8t6\test-core.o: ..\application\module\log_module.h
+stm32c8t6\test-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32c8t6\test-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h
 stm32c8t6\test-core.o: ..\application\midware\uart-core.h
 stm32c8t6\test-core.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-stm32c8t6\test-core.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32c8t6\test-core.o: ..\application\test\test_uart1.h
 stm32c8t6\test-core.o: ..\application\test\test_uart2.h
 stm32c8t6\test-core.o: ..\application\test\test_uart3.h

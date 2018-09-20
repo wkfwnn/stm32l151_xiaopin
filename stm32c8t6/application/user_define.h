@@ -1,6 +1,7 @@
 #ifndef __USER_DEFINE_H_
 #define __USER_DEFINE_H_
 
+#include "log_module.h"
 
 typedef enum {
 	RET_ERROR = -0x10,
@@ -32,10 +33,11 @@ typedef enum {
 #define UART_DEBUG_PORT    "uart2"
 
 /*This is for test func*/
-#define TEST_FUNC            1
+#define TEST_FUNC            0
 #define TEST_UART1_FUNC      0
-#define TEST_UART2_FUNC      1
+#define TEST_UART2_FUNC      0
 #define TEST_UART3_FUNC      0
+
 
 
 

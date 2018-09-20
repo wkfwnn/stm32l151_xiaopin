@@ -19,8 +19,10 @@
 
 void motor_stop()
 {
-	HAL_GPIO_WritePin(MOTOR_GPIO_GROUP,MOTOR_GPIO_PIN1,GPIO_PIN_SET);
-	HAL_GPIO_WritePin(MOTOR_GPIO_GROUP,MOTOR_GPIO_PIN2,GPIO_PIN_SET);
+	DBG_LOG("motor stop\n");
+	
+	HAL_GPIO_WritePin(MOTOR_GPIO_GROUP,MOTOR_GPIO_PIN1,GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(MOTOR_GPIO_GROUP,MOTOR_GPIO_PIN2,GPIO_PIN_RESET);
 }
 void motor_module_start(void)
 {
@@ -42,7 +44,7 @@ uint8_t  set_motor_module_status(uint8_t current_status,uint8_t status)
 				vTaskDelay(5);
 				get_infrared_detection_status(&current_status);
 				time_out += 5;
-				printf("time out %d\n",time_out);
+				//DBG_LOG("time out %d\n",time_out);
 			
 			}while((current_status != MOTOR_MODULE_STATUS_FLAT_0_DEGREE) && (time_out <= 20000));
 				
@@ -58,6 +60,7 @@ uint8_t  set_motor_module_status(uint8_t current_status,uint8_t status)
 		
 		break;
 	case MOTOR_MODULE_STATUS_UPRIGHT_90_DEGREE:
+		
 		if(current_status == MOTOR_MODULE_STATUS_FLAT_0_DEGREE || 
 		  current_status == MOTOR_MODULE_STATUS_OBLIQUE_0_90_DEGREE){
 			//control motor forward
@@ -68,7 +71,7 @@ uint8_t  set_motor_module_status(uint8_t current_status,uint8_t status)
 				vTaskDelay(5);
 				get_infrared_detection_status(&current_status);
 				time_out += 5;
-				printf("time out %d\n",time_out);
+				//DBG_LOG("time out %d\n",time_out);
 			
 			}while((current_status != MOTOR_MODULE_STATUS_UPRIGHT_90_DEGREE) && (time_out <= 10000));
 				
@@ -80,8 +83,8 @@ uint8_t  set_motor_module_status(uint8_t current_status,uint8_t status)
 			motor_stop();
 			
 		}else if(current_status == MOTOR_MODULE_STATUS_MORE_THAN_90_DEGREE){
+			
 			//control motor backward
-			//control motor forward
 			HAL_GPIO_WritePin(MOTOR_GPIO_GROUP,MOTOR_GPIO_PIN1,GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(MOTOR_GPIO_GROUP,MOTOR_GPIO_PIN2,GPIO_PIN_SET);
 			
@@ -89,7 +92,7 @@ uint8_t  set_motor_module_status(uint8_t current_status,uint8_t status)
 				vTaskDelay(5);
 				get_infrared_detection_status(&current_status);
 				time_out += 5;
-				printf("time out %d\n",time_out);
+				//DBG_LOG("time out %d\n",time_out);
 			
 			}while((current_status != MOTOR_MODULE_STATUS_UPRIGHT_90_DEGREE) && (time_out <= 20000));
 				
@@ -105,7 +108,7 @@ uint8_t  set_motor_module_status(uint8_t current_status,uint8_t status)
 		break;
 	case MOTOR_MODULE_STATUS_MORE_THAN_90_DEGREE:
 		break;
-	default:printf("set status is not support\n");
+	default:DBG_LOG("set status is not support\n");
 		break;
 	}
 

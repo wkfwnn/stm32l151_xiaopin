@@ -16,12 +16,13 @@
 void soc_start()
 {
 	
-	uart_core_task_create();
+	//uart_core_task_create();
 	create_state_task();
 	console_task_create();
 	//ble_task_create();
-	//lock_task_create();
+	lock_task_create();
 	motor_lock_task_create();
+	
 #if TEST_FUNC
 	test_func_start();
 #endif
@@ -31,6 +32,7 @@ void soc_start()
 
 void bsp_module_start()
 {
+	uart_core_module_start();
 	ble_module_start();
 	a9500_module_start();
 	motor_module_start();
@@ -39,6 +41,8 @@ void bsp_module_start()
 
 void application_start()
 {
-	soc_start();
 	bsp_module_start();
+	soc_start();
+	
+	
 }

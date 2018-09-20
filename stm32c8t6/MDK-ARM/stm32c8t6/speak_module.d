@@ -44,3 +44,6 @@ stm32c8t6\speak_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_
 stm32c8t6\speak_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim.h
 stm32c8t6\speak_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_tim_ex.h
 stm32c8t6\speak_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
+stm32c8t6\speak_module.o: ..\application\user_define.h
+stm32c8t6\speak_module.o: ..\application\module\log_module.h
+stm32c8t6\speak_module.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h

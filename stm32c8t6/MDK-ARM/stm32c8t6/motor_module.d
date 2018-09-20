@@ -48,3 +48,5 @@ stm32c8t6\motor_module.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart
 stm32c8t6\motor_module.o: ..\application\module\infrared_detection_module.h
 stm32c8t6\motor_module.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 stm32c8t6\motor_module.o: ..\application\user_define.h
+stm32c8t6\motor_module.o: ..\application\module\log_module.h
+stm32c8t6\motor_module.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -19,9 +19,9 @@ void task_state_function(void const * argument)
 		}else{
 		  if(counter++ < 4){
 			vTaskList(buff);
-			printf("%s\n",buff);
+			DBG_LOG("%s\n",buff);
 			vTaskGetRunTimeStats(buff);
-			printf("%s\n",buff);
+			DBG_LOG("%s\n",buff);
 			vTaskDelay(1000);
 		  }else{
 			counter = 0;
@@ -42,13 +42,13 @@ void create_state_task(void)
 	osThreadDef(task_state, task_state_function, osPriorityLow, 0, 140);
 	task_state_handle = osThreadCreate(osThread(task_state), NULL);
 	if(task_state_handle == NULL){
-		printf("task_state_function create fail\n");
+		DBG_LOG("task_state_function create fail\n");
 	}else{
-		printf("task_state_function create success\n");
+		DBG_LOG("task_state_function create success\n");
 	}
 	ret = console_commond_register("CPU",strlen("CPU"),task_uart_commond_excute_func,"cpu usage,stack, left stack");
 	if(ret != RET_OK){
-		printf("cpu commond register fail\n");
+		DBG_LOG("cpu commond register fail\n");
 	}
 	
 }

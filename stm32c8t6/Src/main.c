@@ -51,6 +51,7 @@
 #include "stm32l1xx_hal.h"
 #include "cmsis_os.h"
 #include "application.h"
+#include "user_define.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -83,6 +84,18 @@ static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_USART3_UART_Init(void);
 void StartDefaultTask(void const * argument);
+
+
+//关闭所有中断
+void INTX_DISABLE(void)
+{		  
+	__ASM volatile("cpsid i");
+}
+//开启所有中断
+void INTX_ENABLE(void)
+{
+	__ASM volatile("cpsie i");		  
+}
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -155,9 +168,10 @@ int main(void)
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 	application_start();
-
+  
+	
   /* Start scheduler */
-  osKernelStart();
+   osKernelStart();
   
   /* We should never get here as control is now taken by the scheduler */
 
@@ -358,7 +372,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PB0 PB1 */
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
@@ -378,6 +392,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+
 }
 
 /* USER CODE BEGIN 4 */
@@ -393,10 +414,10 @@ void StartDefaultTask(void const * argument)
   for(;;)
   {
 		osDelay(1000);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-		osDelay(1000);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
-		osDelay(1000);
+		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+		//osDelay(1000);
+		//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+		//osDelay(1000);
 	  //osDelay(1);
 	  //osDelay(1);
 	  //osDelay(1);

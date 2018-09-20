@@ -2,6 +2,7 @@
 #include "cmsis_os.h"
 #include "stm32l1xx_hal.h"
 #include "user_define.h"
+#include "user_gpio_module.h"
 
 
 
@@ -24,10 +25,28 @@
 static infrared_status_change infrared_detection_callback_array[INFRARED_DETECTION_CALLBACK_ARRAY_SIZE] = {NULL,};
 static uint8_t infrared_detection_callback_count = 0x00;
 
+
+void gpio_exti_call_back(uint16_t pin)
+{
+	uint8_t i = 0;
+	//DBG_LOG_ISR("gpio_exti_call_back pin %d\n",pin);
+	for (i = 0; i < infrared_detection_callback_count; ++i){
+		DBG_LOG_ISR("call  infrared_detection\n");
+		infrared_detection_callback_array[i]();	
+	}
+
+}
+
 void infrared_detection_module_start()
 {
-	enable_infrared_led();	
-
+	int ret  = RET_OK;
+	enable_infrared_led();
+	
+	ret = register_gpio_exti_callback(gpio_exti_call_back);
+	if(ret != RET_OK){
+		DBG_LOG("register_gpio_exti_callback fail\n");
+	}
+	
 }
 
 void infrared_detection_module_stop()
