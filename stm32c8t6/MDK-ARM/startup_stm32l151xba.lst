@@ -502,11 +502,11 @@ ARM Macro Assembler    Page 8
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=stm32c8t6\startup_stm32l151xba.d -ostm32c8t6\startup_stm32l151xba.
-o -I..\Inc -IG:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE -ID:\keil_v5\ARM\PA
-CK\ARM\CMSIS\4.5.0\CMSIS\Include -ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0
-\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION 
-SETA 521" --predefine="_RTE_ SETA 1" --predefine="STM32L151xBA SETA 1" --list=s
-tartup_stm32l151xba.lst startup_stm32l151xba.s
+o -I..\Inc -IG:\wkf\xiaopin\stm32l151_xiaopin\stm32c8t6\MDK-ARM\RTE -ID:\keil_v
+5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -ID:\keil_v5\ARM\PACK\Keil\STM32L1xx_D
+FP\1.2.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_
+VERSION SETA 521" --predefine="_RTE_ SETA 1" --predefine="STM32L151xBA SETA 1" 
+--list=startup_stm32l151xba.lst startup_stm32l151xba.s
 
 
 

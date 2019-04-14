@@ -21,39 +21,21 @@ Target DLL:      Segger\JL2CM3.dll V2.99.23.0
 Dialog DLL:      TCM.DLL V1.14.14.0
  
 <h2>Project:</h2>
-G:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\stm32c8t6.uvprojx
-Project File Date:  09/19/2018
+G:\wkf\xiaopin\stm32l151_xiaopin\stm32c8t6\MDK-ARM\stm32c8t6.uvprojx
+Project File Date:  02/25/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 3 (build 300)', folder: 'D:\keil_v5\ARM\ARMCC\Bin'
 Build target 'stm32c8t6'
-compiling test-core.c...
-compiling test_uart1.c...
-compiling test_uart3.c...
-compiling test_uart2.c...
-compiling application.c...
-compiling console.c...
-compiling uart-core.c...
-compiling ble_bluetooth_module.c...
-compiling ble_bluetooth.c...
-..\application\ble_bluetooth.c(67): warning:  #68-D: integer conversion resulted in a change of sign
-  		ret = RET_ERROR;
-..\application\ble_bluetooth.c(79): warning:  #68-D: integer conversion resulted in a change of sign
-  				ret = RET_ERROR;
-..\application\ble_bluetooth.c: 2 warnings, 0 errors
-compiling lock.c...
-compiling motor_lock.c...
-..\application\motor_lock.c(219): warning:  #68-D: integer conversion resulted in a change of sign
-  		ret = RET_ERROR;
-..\application\motor_lock.c(229): warning:  #68-D: integer conversion resulted in a change of sign
-  				ret = RET_ERROR;
-..\application\motor_lock.c(210): warning:  #177-D: variable "i" was declared but never referenced
-  	uint8_t i = 0;
-..\application\motor_lock.c: 3 warnings, 0 errors
+compiling log.c...
+compiling print.c...
 linking...
-Program Size: Code=30572 RO-data=596 RW-data=416 ZI-data=10192  
-FromELF: creating hex file...
-"stm32c8t6\stm32c8t6.axf" - 0 Error(s), 5 Warning(s).
+stm32c8t6\stm32c8t6.axf: Error: L6218E: Undefined symbol a9500_data_read_call_back_register (referred from iot_module_task.o).
+stm32c8t6\stm32c8t6.axf: Error: L6218E: Undefined symbol iot_module_power_and_selftest (referred from iot_module_task.o).
+stm32c8t6\stm32c8t6.axf: Error: L6218E: Undefined symbol send_test_at_command (referred from iot_module_task.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 3 error messages.
+"stm32c8t6\stm32c8t6.axf" - 3 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -64,13 +46,14 @@ Package Vendor: ARM
    * Component: CORE Version: 4.3.0
 
 <h2>Collection of Component include folders:</h2>
-  G:\wkf\xiaopin\stm32c8t6\stm32c8t6\MDK-ARM\RTE
+  G:\wkf\xiaopin\stm32l151_xiaopin\stm32c8t6\MDK-ARM\RTE
   D:\keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
   D:\keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
+Target not created.
 Build Time Elapsed:  00:00:01
 </pre>
 </body>
